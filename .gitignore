@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Yaf template
+vendor/
+node_modules/
+npm-debug.log
+
+.idea
+
