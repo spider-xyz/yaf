@@ -9,8 +9,8 @@ yaf
 * 需要环境
 ```shell
 nginx
-php7
-mysql5.x
+php7.0
+mysql5.6
 ```
 
 * 下载源码:
@@ -22,7 +22,15 @@ git clone https://github.com/spider-xyz/yaf.git
 * 配置:
 
 ```shell
-vim conf/application.ini
+# vim /usr/local/php5/lib/php.ini
+
+yaf.library = /data/html/Yaf/application/library
+yaf.environ = 'develop'
+yaf.use_spl_autoload = 1
+yaf.use_namespace = 1
+
+    	 
+# vim conf/application.ini
 
 [public]
 application.directory = APPLICATION_PATH "/application/"
@@ -36,6 +44,6 @@ db.port = 3306;
 [product:public]
 db.host = '127.0.0.1'
 db.username = 'root'
-db.password = ''
+db.password = '123456'
 db.port = 3306;
 ```
